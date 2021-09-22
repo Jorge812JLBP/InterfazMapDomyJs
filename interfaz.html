@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Interfaz</title>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Trabajo de interfaz </span>
+        </div>
+      </nav>
+
+      
+<form id="inputs" onsubmit="event.preventDefault();registration.validate();" autocomplete="off">
+
+    <div m-5 class="content m-5">
+        <h3>Customer</h3>
+        <label for="id">ID</label><input class="form-control" type="text" id="id">
+        <br>
+        <label for="name">Name</label><input class="form-control" type="text" id="name">
+        <br>
+        <label for="username">Username</label><input class="form-control" type="text" id="username">
+        <br>
+        <label for="email">Email</label><input class="form-control" type="email" id="email">
+        <br>
+        <label for="phone">Phone</label><input class="form-control" type="tel" id="phone">
+        <br>
+        <label for="website">Website</label><input class="form-control" type="text" id="website">
+    
+        <br>
+        
+        <h3>Company</h3>
+        <label for="companyname">Name</label><input class="form-control" type="text" id="companyname">
+        <label for="street">Street</label><input class="form-control" type="text" id="street">
+        <label for="city">City</label><input class="form-control" type="text" id="city">
+        <label for="zipcode">Zipcode</label><input class="form-control" type="text" id="zipcode">
+        <br>
+        <button  type="button" class="btn btn-success" id="btnAdd">Add</button>
+
+        <div id='top'>
+            <div id='bottom'>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+    <div m-5 class="content m-5">
+     
+        <label for="delete">Delete</label><input class="form-control" type="text" placeholder="Which user would you like to delete by ID?" id="delete">
+        <br>
+        <button type="button" class="btn btn-warning" id="btnDelete">Delete</button>
+
+        
+        <div id='top1'>
+            <div id='bottom1'>
+            </div>
+        </div>
+    
+        <br>
+        <br>
+    
+        <label for="search">Search</label><input class="form-control" type="text" placeholder="Which user would you like to search by ID for?" id="search">
+        <br>
+        <button type="button" class="btn btn-danger" id="btnSearch">Search</button>
+        <div id='top2'>
+            <div id='bottom2'>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+<div m-5 class="content m-5">
+    <label>Select an user</label>
+    <select id="userselect" onchange="registration.ShowSelect()">
+        <option value="">User</option>
+    </select>
+    <br>
+    <button type="button" class="btn btn-warning" id="btnLoad">Load</button>
+</div>
+
+
+
+
+<form>
+ 
+  
+    <div id='result'></div>
+    
+</form>
+
+
+<div m-5 class="content m-5">
+    <button type="button" class="btn btn-warning" id="btnallusers">All users</button>
+</div>
+
+
+<form>
+ 
+  
+    <div id='resultAll'><h3>All users</h3></div>
+    
+</form>
+
+
+
+
+
+<script src="interfaz.js"></script>
+    
+
+</body>
+</html>
